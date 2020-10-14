@@ -1,9 +1,6 @@
 package com.daily.problem;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 /*
 
@@ -19,29 +16,28 @@ Follow-up: what if you can't use division?
  */
 
 public class Problem_2 {
-	
+
 	public static void getProduct(int ar[]) {
 		int left[] = new int[ar.length];
 		int right[] = new int[ar.length];
 		int result[] = new int[ar.length];
-		
+
 		left[0] = 1;
-		right[ar.length-1] = 1;
-		
-		
-		for(int i=1;i<ar.length;i++) {
-			left[i] = left[i-1] * ar[i-1]; 
+		right[ar.length - 1] = 1;
+
+		for (int i = 1; i < ar.length; i++) {
+			left[i] = left[i - 1] * ar[i - 1];
 		}
-		
-		for(int i=ar.length-2;i>=0;i--) {
-			right[i] = right[i+1] * ar[i+1]; 
+
+		for (int i = ar.length - 2; i >= 0; i--) {
+			right[i] = right[i + 1] * ar[i + 1];
 		}
-		
-		for(int i=0;i<ar.length;i++) {
-			result[i] = left[i] * right[i];		
-			}
-		
+
+		for (int i = 0; i < ar.length; i++) {
+			result[i] = left[i] * right[i];
+		}
+
 		System.out.println(Arrays.toString(result));
-	
+
 	}
 }
