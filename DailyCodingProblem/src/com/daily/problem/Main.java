@@ -12,7 +12,8 @@ public class Main {
 		list.add(3);
 		list.add(7);
 		Problem_1.getPair(list, 17);
-
+		int ar[] = {1,2,3,4};
+		Problem_2.getProduct(ar);
 	}
 
 }
